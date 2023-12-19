@@ -39,4 +39,130 @@ main {
   height: 100vh;
   background-image: url(./img/background.png);
   background-size: cover;
+
+  text-align: center;
+}
+
+#main {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 70%;
+  height: 100%;
+
+  padding: 10px 0;
+}
+
+#main h1 {
+  font-size: 50px;
+  color: white;
+  padding-top: 2%;
+  margin: 0;
+}
+
+.mbti span {
+  font-size: 70px;
+  margin: 0 -8px;
+}
+
+#container {
+  width: 100%;
+  height: 85%;
+  box-sizing: border-box;
+  /* border-radius: 10px;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.767);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
+  /* border: 10px solid rgba(255, 255, 147, 0.5);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 147, 0.2); */
+  border: 10px solid rgba(255, 253, 226, 0.5);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  padding: 2% 3%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 2%;
+}
+
+#container input {
+  display: none;
+}
+
+#container input:checked + label {
+  background-color: rgb(102, 78, 221);
+}
+
+#container input:checked + label .checkBox {
+  background-image: url(./img/checkbox.png);
+}
+
+#container input:checked + label .chating {
+  display: block;
+}
+
+#container label {
+  border-radius: 25px;
+  border: 5px solid white;
+  background-color: rgb(201, 191, 250);
+
+  text-align: center;
+}
+
+#container label:hover {
+  cursor: pointer;
+}
+
+#container label .checkBox {
+  width: 30px;
+  height: 30px;
+
+  background-image: url(./img/box.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 3% 0 0 5%;
+}
+
+#container label h2 {
+  margin: 0;
+  margin-top: -15px;
+  font-size: 48px;
+  color: white;
+}
+
+#container label hr {
+  width: 50%;
+  height: 4px;
+  border: none;
+  background-color: white;
+  margin: 3px auto;
+}
+
+#container a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+#container .extraBt {
+  padding-right: 3%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#container .chating {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/chat.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+}
+
+#container .extraBt img {
+  width: 30px;
+  height: 30px;
 }
