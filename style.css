@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+}
+
+header img {
+  width: 45px;
+}
+
+#userResist {
+  width: 150px;
+  font-family: "Kanit", sans-serif;
+  font-size: 22px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+#userResist a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./img/background.png);
+  background-size: cover;
+}
