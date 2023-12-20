@@ -100,6 +100,10 @@ main {
   background-image: url(./img/checkbox.png);
 }
 
+#container input:checked + label a {
+  display: inline-block;
+}
+
 #container input:checked + label .chating {
   display: block;
 }
@@ -142,7 +146,7 @@ main {
 }
 
 #container a {
-  display: inline-block;
+  display: none;
   width: 30px;
   height: 30px;
 }
