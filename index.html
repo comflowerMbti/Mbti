@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <img src="./img/menu.png" alt="menu icon" />
+      <a onclick="openNav()"><img src="./img/menu.png" alt="menu icon" /></a>
       <section id="userResist">
         <a href="./login.html">Login</a>
         <a href="./join.html">Join</a>
@@ -212,5 +212,45 @@
         </section>
       </section>
     </main>
+
+    <section id="sidebar">
+      <a onclick="closeNav()">
+        <img src="./img/menu.png" alt="menu icon" id="sidebarMenu" />
+      </a>
+      <section id="sidebarMain">
+        <div id="groupName">
+          <img src="./img/flower.png" alt="flower icon" />
+          <p>컴바라기</p>
+        </div>
+        <hr />
+        <ul id="userList">
+          <li>
+            <p><span>권유현</span> / <span>ENFJ</span></p>
+          </li>
+          <li>
+            <p><span>박예진</span> / <span>INTJ</span></p>
+          </li>
+          <li>
+            <p><span>정윤석</span> / <span>ISFP</span></p>
+          </li>
+          <li>
+            <p><span>최승희</span> / <span>ENTJ</span></p>
+          </li>
+          <li>
+            <p><span>홍승혁</span> / <span>ENTJ</span></p>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <script>
+      function openNav() {
+        document.getElementById("sidebar").style.width = "20%";
+      }
+
+      function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+      }
+    </script>
   </body>
 </html>
