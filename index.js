@@ -34,3 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+function openNav() {
+  document.getElementById('sidebar').style.width = '20%';
+}
+
+function closeNav() {
+  document.getElementById('sidebar').style.width = '0';
+}
