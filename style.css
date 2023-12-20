@@ -237,3 +237,46 @@ main {
   font-size: 20px;
   color: rgb(143, 60, 221);
 }
+
+#person:hover + #people,
+#people:hover {
+  display: block;
+}
+
+#people {
+  display: none;
+  border-radius: 10px;
+  background-color: #ffe699;
+  position: absolute;
+  padding: 10px;
+  text-align: left;
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+}
+
+.up {
+  transform: translate(90%, 5%);
+}
+
+.down {
+  transform: translate(90%, -90%);
+}
+
+.listBox {
+  display: flex;
+}
+
+.left {
+  flex: 40%;
+  margin-right: 5px;
+}
+
+.left img {
+  border-radius: 50%;
+}
+
+.right {
+  flex: 60%;
+  padding: 5px;
+  white-space: nowrap;
+}
