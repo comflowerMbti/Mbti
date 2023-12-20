@@ -6,10 +6,6 @@ function closePopup() {
   document.getElementById('ch_overlay').style.display = 'none';
 }
 
-function openPopup() {
-  document.getElementById('ch_overlay').style.display = 'flex';
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   const textarea = document.getElementById('ch_text');
   textarea.addEventListener('input', handleTextareaInput);
