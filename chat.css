@@ -31,6 +31,7 @@ body {
   position: relative;
   box-sizing: border-box;
   padding: 40px 0;
+  left: 300px;
 }
 
 .ch_close-btn {
@@ -171,7 +172,7 @@ a {
 
 .ch_popup .ch1 .textbox::before {
   left: -15px;
-  content: '◀';
+  content: "◀";
   color: #ddd;
 }
 
@@ -186,7 +187,7 @@ a {
 
 .ch_popup .ch2 .textbox::before {
   right: -15px;
-  content: '▶';
+  content: "▶";
   color: #f9eb54;
 }
 
