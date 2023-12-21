@@ -4,7 +4,7 @@ body {
 
 header {
   width: 100%;
-  height: 80px;
+  height: 5vw;
 
   padding: 0 30px;
   box-sizing: border-box;
@@ -17,13 +17,13 @@ header {
 }
 
 header img {
-  width: 45px;
+  width: 3vw;
 }
 
 #userResist {
-  width: 150px;
-  font-family: 'Kanit', sans-serif;
-  font-size: 22px;
+  width: 10vw;
+  font-family: "Kanit", sans-serif;
+  font-size: 1.6vw;
 
   display: flex;
   justify-content: space-around;
@@ -53,14 +53,14 @@ main {
 }
 
 #main h1 {
-  font-size: 50px;
+  font-size: 3.5vw;
   color: white;
   padding-top: 2%;
   margin: 0;
 }
 
 .mbti span {
-  font-size: 70px;
+  font-size: 4.5vw;
   margin: 0 -8px;
 }
 
@@ -121,8 +121,8 @@ main {
 }
 
 #container label .checkBox {
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
 
   background-image: url(./img/box.png);
   background-repeat: no-repeat;
@@ -132,14 +132,14 @@ main {
 
 #container label h2 {
   margin: 0;
-  margin-top: -15px;
-  font-size: 48px;
+  margin-top: -1vw;
+  font-size: 3vw;
   color: white;
 }
 
 #container label hr {
   width: 50%;
-  height: 4px;
+  height: 0.3vw;
   border: none;
   background-color: white;
   margin: 3px auto;
@@ -147,8 +147,8 @@ main {
 
 #container a {
   display: none;
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
 }
 
 #container .extraBt {
@@ -167,8 +167,8 @@ main {
 }
 
 #container .extraBt img {
-  width: 30px;
-  height: 30px;
+  width: 2vw;
+  height: 2vw;
 }
 
 #sidebar {
@@ -184,14 +184,14 @@ main {
 }
 
 #sidebar a {
-  width: 45px;
-  height: 45px;
+  width: 3vw;
+  height: 3vw;
   margin: 15px 0 0 30px;
   display: inline-block;
 }
 
 #sidebarMenu {
-  width: 45px;
+  width: 3vw;
   filter: invert(38%) sepia(50%) saturate(6667%) hue-rotate(239deg)
     brightness(91%) contrast(90%);
 }
@@ -203,11 +203,11 @@ main {
 }
 
 #groupName img {
-  width: 50px;
+  width: 3.5vw;
 }
 
 #groupName p {
-  font-size: 30px;
+  font-size: 2vw;
   margin: 0;
   color: rgb(143, 60, 221);
 }
@@ -234,7 +234,7 @@ main {
 }
 
 #userList li {
-  font-size: 20px;
+  font-size: 1.2vw;
   color: rgb(143, 60, 221);
 }
 
@@ -250,7 +250,7 @@ main {
   position: absolute;
   padding: 10px;
   text-align: left;
-  font-family: 'Jua', sans-serif;
+  font-family: "Jua", sans-serif;
   font-size: 20px;
 }
 
@@ -439,7 +439,7 @@ a {
 
 .ch_popup .ch1 .textbox::before {
   left: -15px;
-  content: '◀';
+  content: "◀";
   color: #ddd;
 }
 
@@ -454,7 +454,7 @@ a {
 
 .ch_popup .ch2 .textbox::before {
   right: -15px;
-  content: '▶';
+  content: "▶";
   color: #f9eb54;
 }
 
