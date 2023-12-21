@@ -5,7 +5,7 @@ function random_1to6(){
 
 function openList(){
     
-    let people = ["박예진", "목승엽", "정윤석"];
+    let people = ["제갈예진", "목승엽", "정윤석", "권유현"];
     for(let i=0; i<people.length; i++)
     {
         document.write("<div class='listBox'>");

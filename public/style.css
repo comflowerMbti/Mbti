@@ -252,7 +252,7 @@ main {
   color: rgb(143, 60, 221);
 }
 
-#person:hover + #people,
+.person:hover + #people,
 #people:hover {
   display: block;
 }
