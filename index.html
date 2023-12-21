@@ -8,16 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
       rel="stylesheet"
     />
-    <script src="list.js"></script>
+    <script src="index.js"></script>
     <title>MBTI 동아리</title>
   </head>
   <body>
@@ -29,6 +32,59 @@
       </section>
     </header>
     <main>
+      <div class="ch_overlay" id="ch_overlay">
+        <div class="ch_popup">
+          <textarea id="ch_text" class="ch_text" rows="1"></textarea>
+          <div class="ch_close-btn" onclick="closePopup()">&lt;</div>
+          <img class="ch_readinggs" src="img/readingglass.png" />
+          <img class="ch_menu" src="img/ch_menu.png" />
+          <h3 id="ch_popup_title">ENFJ</h3>
+          <div class="ch_chatBar" id="ch_chatBar"></div>
+          <img class="ch_plus" src="img/ch_plus.png" onclick="addMessage()" />
+          <button type="button" class="ch_arrow" onclick="addMessage()">
+            <img class="ch_arrow2" src="img/ch_arrow.png" />
+          </button>
+
+          <div class="chat ch1">
+            <div><p class="ch_name">예진 누나</p></div>
+            <div class="ch_textime">
+              <div class="textbox">
+                안녕하세요. ENFJ방 입니다asdfas.a gbdfjkgb lsadjbfjkasfbkasbf
+                kasdfk
+              </div>
+              <div class="ch_time">오후 5:23</div>
+            </div>
+          </div>
+
+          <div class="chat ch2">
+            <div class="ch_textime2">
+              <div class="ch_time">오후 5:23</div>
+              <div class="textbox">안녕하세요. 저는 ENFJ 권유현 입니다~</div>
+            </div>
+          </div>
+
+          <div class="chat ch1">
+            <div><p class="ch_name">예진 누나</p></div>
+            <div class="ch_textime">
+              <div class="textbox">
+                반갑습니다 ~~~~~~~ ~~ ~ ~ ~ ~ ~ ~ ~ ~ ~dddd안녕 ~ ~
+              </div>
+              <div class="ch_time">오후 5:23</div>
+            </div>
+          </div>
+
+          <div class="chat ch2">
+            <div class="ch_textime2">
+              <div class="ch_time">오후 5:23</div>
+              <div class="textbox">
+                진짜 아무것도 하기 싫다.asff jahb kasdbfjkad bfjkasbf kajbf
+                kasfb asjkf bjk
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section id="main">
         <h1>
           <div style="display: inline" class="mbti">
@@ -46,12 +102,21 @@
             <h2>ENTP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up">
-                <script>
-                  openList();
-                </script>
+                <div class="listBox">
+                  <div class="left">
+                    <img src="./img/profile/1.jpg" />
+                  </div>
+                  <div class="right">박예진</div>
+                </div>
+                <div class="listBox">
+                  <div class="left">
+                    <img src="./img/profile/2.jpg" />
+                  </div>
+                  <div class="right">목승엽</div>
+                </div>
               </div>
             </div>
           </label>
@@ -62,7 +127,7 @@
             <h2>ENTJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -74,7 +139,7 @@
             <h2>INTP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -86,7 +151,7 @@
             <h2>INTJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
               <div id="people"></div>
@@ -99,7 +164,7 @@
             <h2>ENFP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -111,7 +176,7 @@
             <h2>ENFJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -123,7 +188,7 @@
             <h2>INFP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -135,7 +200,7 @@
             <h2>INFJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
+              <a onclick="openPopup()"><div class="chating"></div></a>
               <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="up"></div>
             </div>
@@ -147,8 +212,8 @@
             <h2>ESFJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -159,8 +224,8 @@
             <h2>ESTJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -171,8 +236,8 @@
             <h2>ISFJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -183,8 +248,8 @@
             <h2>ISTJ</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -195,8 +260,8 @@
             <h2>ESFP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -207,8 +272,8 @@
             <h2>ESTP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img"  id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -219,8 +284,8 @@
             <h2>ISFP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -231,8 +296,8 @@
             <h2>ISTP</h2>
             <hr />
             <div class="extraBt">
-              <a href="./chat.html"><div class="chating"></div></a>
-              <img src="./img/person.png" alt="person img" id="person"/>
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <img src="./img/person.png" alt="person img" id="person" />
               <div id="people" class="down"></div>
             </div>
           </label>
@@ -269,16 +334,5 @@
         </ul>
       </section>
     </section>
-
-    <script>
-      function openNav() {
-        document.getElementById("sidebar").style.width = "20%";
-      }
-
-      function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-      }
-    </script>
-    <script src="chat.js"></script>
   </body>
 </html>

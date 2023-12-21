@@ -1,66 +1,65 @@
-body{
-    background-image : url(./img/background.png);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+body {
+  background-image: url(./img/background.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
 }
-form{
-    height: 480px;
-    width: 400px;
-    background-color: #ffffff35;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-    outline: none;
-    border: none;
-    text-align: center;
+form {
+  height: 480px;
+  width: 400px;
+  background-color: #ffffff35;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+  outline: none;
+  border: none;
+  text-align: center;
 }
-form h3{
-   
-    font-size: 40px;   
-    font-weight: 600;   
-    line-height: 42px;  
-    text-align: center; 
-    margin-bottom: 70px; 
+form h3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 70px;
 }
-input{
-    display: block;
-    height: 50px;
-    width: 94%;
-    background-color: rgba(255,255,255,0.07);
-    border-radius: 5px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
+input {
+  display: block;
+  height: 50px;
+  width: 94%;
+  background-color: rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
 }
-::placeholder{
-    color: #e5e5e5;
+::placeholder {
+  color: #e5e5e5;
 }
-button{
-    margin-top: 50px;
-    width: 100%;
-    background-color: rgba(50, 46, 46, 0.8);
-    color: #ffffff;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 40px;
+button {
+  margin-top: 50px;
+  width: 100%;
+  background-color: rgba(50, 46, 46, 0.8);
+  color: #ffffff;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
 }
-button:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    color: #080710;
-    transition: 0.5s;
+button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #080710;
+  transition: 0.5s;
 }
-a{
-    color:rgb(0, 153, 255);
-    font-weight: bold;
-    text-decoration: none;
+a {
+  color: rgb(0, 153, 255);
+  font-weight: bold;
+  text-decoration: none;
 }
