@@ -499,3 +499,7 @@ a {
   display: flex;
   align-items: flex-end;
 }
+
+.registInput {
+  margin-bottom: 20px;
+}

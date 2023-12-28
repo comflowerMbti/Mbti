@@ -97,7 +97,7 @@
           </div>
           동아리
         </h1>
-        <section id="container">
+        <form id="container">
           <input type="radio" name="userMbti" value="1" id="ENTP" />
           <label for="ENTP" class="mbtiBox">
             <div id="ENTPCheck" class="checkBox"></div>
@@ -303,7 +303,7 @@
               <div id="people" class="down"></div>
             </div>
           </label>
-        </section>
+        </form>
       </section>
     </main>
 
@@ -336,5 +336,24 @@
         </ul>
       </section>
     </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 페이지 로딩이 완료되면 자동으로 데이터를 요청
+        requestData();
+      });
+
+      function requestData() {
+        // AJAX를 이용해 서버에 데이터 요청
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
+          }
+        };
+        xhr.open("GET", "/", true);
+        xhr.send();
+      }
+    </script>
   </body>
 </html>
