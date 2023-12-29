@@ -42,7 +42,7 @@ input {
   color: #e5e5e5;
 }
 button {
-  margin-top: 50px;
+  margin-top: 30px;
   width: 100%;
   background-color: rgba(50, 46, 46, 0.8);
   color: #ffffff;
@@ -51,7 +51,7 @@ button {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 button:hover {
   background-color: rgba(255, 255, 255, 0.8);
