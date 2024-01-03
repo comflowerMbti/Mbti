@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <title>MBTI 동아리</title>
+  </head>
+  <body>
+    <header>
+      <a onclick="openNav()"
+        ><img src="/img/menu.png" alt="menu icon" id="mainMenu"
+      /></a>
+    </header>
+    <main>
+      <div class="ch_overlay" id="ch_overlay">
+        <div class="ch_popup">
+          <div id="ch_top">
+            <div class="ch_close-btn" onclick="closePopup()">&lt;</div>
+            <div id="ch_title"><%= user.user_mbti %></div>
+            <div class="ch_close-btn"></div>
+          </div>
+          <div id="ch_chatBox">
+            <% chat.forEach(chat => { %> <% if (chat.chat_name ===
+            user.user_name) { %>
+            <div class="ch_message">
+              <div class="massage user">
+                <div class="message user-message"><%= chat.chat_text %></div>
+              </div>
+            </div>
+            <% } else { %>
+            <div class="ch_message">
+              <div class="message other">
+                <div><%= chat.chat_name %></div>
+                <div class="message other-message"><%= chat.chat_text %></div>
+              </div>
+            </div>
+            <% } %> <% }); %>
+          </div>
+          <form id="ch_bottom">
+            <textarea name="" id="ch_textarea" cols="30" rows="10"></textarea>
+            <button type="button" id="ch_submit" onclick="submitForm()">
+              보내기
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <section id="main">
+        <h1>
+          <div style="display: inline" class="mbti">
+            <span style="color: rgb(250, 118, 118)">M</span>
+            <span style="color: rgb(254, 254, 116)">B</span>
+            <span style="color: rgb(89, 195, 89)">T</span>
+            <span style="color: rgb(123, 123, 255)">I</span>
+          </div>
+          동아리
+        </h1>
+        <form id="container">
+          <% const mbtiFromServer = user.user_mbti %> <input type="radio"
+          name="userMbti" value="ENTP" id="ENTP" <%= mbtiFromServer === 'ENTP' ?
+          'checked' : '' %> />
+          <label for="ENTP" class="mbtiBox">
+            <div id="ENTPCheck" class="checkBox"></div>
+            <h2>ENTP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ENTP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ENTJ" id="ENTJ" <%=
+          mbtiFromServer === 'ENTJ' ? 'checked' : '' %> />
+          <label for="ENTJ" class="mbtiBox">
+            <div id="ENTJCheck" class="checkBox"></div>
+            <h2>ENTJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ENTJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="INTP" id="INTP" <%=
+          mbtiFromServer === 'INTP' ? 'checked' : '' %>/>
+          <label for="INTP" class="mbtiBox">
+            <div id="INTPCheck" class="checkBox"></div>
+            <h2>INTP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='INTP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="INTJ" id="INTJ" <%=
+          mbtiFromServer === 'INTJ' ? 'checked' : '' %>/>
+          <label for="INTJ" class="mbtiBox">
+            <div id="INTJCheck" class="checkBox"></div>
+            <h2>INTJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='INTJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ENFP" id="ENFP" <%=
+          mbtiFromServer === 'ENFP' ? 'checked' : '' %>/>
+          <label for="ENFP" class="mbtiBox">
+            <div id="ENFPCheck" class="checkBox"></div>
+            <h2>ENFP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ENFP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ENFJ" id="ENFJ" <%=
+          mbtiFromServer === 'ENFJ' ? 'checked' : '' %>/>
+          <label for="ENFJ" class="mbtiBox">
+            <div id="ENFJCheck" class="checkBox"></div>
+            <h2>ENFJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ENFJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="INFP" id="INFP" <%=
+          mbtiFromServer === 'INFP' ? 'checked' : '' %>/>
+          <label for="INFP" class="mbtiBox">
+            <div id="INFPCheck" class="checkBox"></div>
+            <h2>INFP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='INFP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="INFJ" id="INFJ" <%=
+          mbtiFromServer === 'INFJ' ? 'checked' : '' %>/>
+          <label for="INFJ" class="mbtiBox">
+            <div id="INFJCheck" class="checkBox"></div>
+            <h2>INFJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="up">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='INFJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ESFJ" id="ESFJ" <%=
+          mbtiFromServer === 'ESFJ' ? 'checked' : '' %>/>
+          <label for="ESFJ" class="mbtiBox">
+            <div id="ESFJCheck" class="checkBox"></div>
+            <h2>ESFJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ESFJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ESTJ" id="ESTJ" <%=
+          mbtiFromServer === 'ESTJ' ? 'checked' : '' %>/>
+          <label for="ESTJ" class="mbtiBox">
+            <div id="ESTJCheck" class="checkBox"></div>
+            <h2>ESTJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ESTJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ISFJ" id="ISFJ" <%=
+          mbtiFromServer === 'ISFJ' ? 'checked' : '' %>/>
+          <label for="ISFJ" class="mbtiBox">
+            <div id="ISFJCheck" class="checkBox"></div>
+            <h2>ISFJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ISFJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ISTJ" id="ISTJ" <%=
+          mbtiFromServer === 'ISTJ' ? 'checked' : '' %>/>
+          <label for="ISTJ" class="mbtiBox">
+            <div id="ISTJCheck" class="checkBox"></div>
+            <h2>ISTJ</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ISTJ') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ESFP" id="ESFP" <%=
+          mbtiFromServer === 'ESFP' ? 'checked' : '' %>/>
+          <label for="ESFP" class="mbtiBox">
+            <div id="ESFPCheck" class="checkBox"></div>
+            <h2>ESFP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ESFP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ESTP" id="ESTP" <%=
+          mbtiFromServer === 'ESTP' ? 'checked' : '' %> />
+          <label for="ESTP" class="mbtiBox">
+            <div id="ESTPCheck" class="checkBox"></div>
+            <h2>ESTP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ESTP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ISFP" id="ISFP" <%=
+          mbtiFromServer === 'ISFP' ? 'checked' : '' %>/>
+          <label for="ISFP" class="mbtiBox">
+            <div id="ISFPCheck" class="checkBox"></div>
+            <h2>ISFP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ISFP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="userMbti" value="ISTP" id="ISTP" <%=
+          mbtiFromServer === 'ISTP' ? 'checked' : '' %> />
+          <label for="ISTP" class="mbtiBox">
+            <div id="ISTPCheck" class="checkBox"></div>
+            <h2>ISTP</h2>
+            <hr />
+            <div class="extraBt">
+              <a onclick="openPopup()"><div class="chating"></div></a>
+              <div class="person"><div class="inperson"></div></div>
+              <div id="people" class="down">
+                <% allUsers.forEach(user => { %> <% if (user.user_mbti
+                ==='ISTP') { %>
+                <div class="listBox">
+                  <div class="right"><%= user.user_name %></div>
+                </div>
+                <% } %> <% }); %>
+              </div>
+            </div>
+          </label>
+        </form>
+      </section>
+    </main>
+
+    <section id="sidebar">
+      <a onclick="closeNav()">
+        <img src="/img/menu.png" alt="menu icon" id="sidebarMenu" />
+      </a>
+      <section id="sidebarMain">
+        <div id="groupName">
+          <img src="/img/flower.png" alt="flower icon" />
+          <p>컴바라기</p>
+        </div>
+        <hr />
+        <ul id="userList">
+          <% allUsers.forEach(user => { %>
+          <li>
+            <p>
+              <span><%= user.user_name %></span> /
+              <span><%= user.user_mbti %></span>
+            </p>
+          </li>
+          <% }); %>
+        </ul>
+      </section>
+    </section>
+
+    <script>
+      // overlay 변수를 전역으로 정의
+      const overlay = document.getElementById("ch_overlay");
+      overlay.style.display = "none";
+      // 로컬 스토리지에서 showPopupOnLoad 값을 가져오기
+      let showPopupOnLoad = localStorage.getItem("showPopupOnLoad") === "true";
+
+      // 팝업을 열기 위한 함수
+      function openPopup() {
+        // 팝업을 열 때 보여줄 요소를 지정
+        overlay.style.display = "flex";
+        localStorage.setItem("showPopupOnLoad", "true");
+      }
+
+      // 팝업을 닫기 위한 함수
+      function closePopup() {
+        // 팝업을 닫을 때 숨길 요소를 지정
+        overlay.style.display = "none";
+        localStorage.setItem("showPopupOnLoad", "none");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const radioButtons = document.querySelectorAll(
+          'input[name="userMbti"]'
+        );
+
+        radioButtons.forEach((button) => {
+          button.addEventListener("change", function () {
+            const selectedValue = this.value;
+            const token = getToken();
+
+            // PUT 요청
+            fetch(`/main/${selectedValue}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${token}`,
+              },
+              body: JSON.stringify({ mbti: selectedValue }),
+            })
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("PUT request failed");
+                }
+                console.log("PUT request successful");
+
+                // PUT 요청 성공 후, 페이지를 새로고침합니다.
+                window.location.reload();
+              })
+              .catch((error) => {
+                console.error(error);
+              });
+          });
+        });
+
+        // POST 요청
+        function submitForm() {
+          const textareaValue = document.getElementById("ch_textarea").value;
+          const token = getToken();
+          const mbti = "<%= user.user_mbti %>";
+
+          fetch(`/main`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({ mbti, text: textareaValue }),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("POST request failed");
+              }
+              console.log("POST request successful");
+
+              // POST 요청 성공 후, 페이지를 새로고침합니다.
+              window.location.reload();
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        }
+
+        // 페이지 로딩 후 팝업 여부 확인
+        if (showPopupOnLoad) {
+          openPopup();
+        }
+
+        function getToken() {
+          const tokenCookie = document.cookie
+            .split("; ")
+            .find((cookie) => cookie.startsWith("token="));
+          return tokenCookie ? tokenCookie.split("=")[1] : null;
+        }
+
+        const submitButton = document.getElementById("ch_submit");
+        submitButton.addEventListener("click", submitForm);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" , href="/css/loginStyle.css" />
+    <title>회원가입 페이지</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form style="height: 600px" method="POST" action="/register">
+        <h3 style="line-height: 1px">Join Now</h3>
+
+        <input
+          type="text"
+          placeholder="User name"
+          class="registInput"
+          name="user_name"
+          id="user_name"
+        />
+        <input
+          type="이메일"
+          placeholder="email"
+          class="registInput"
+          name="user_email"
+          id="user_email"
+        />
+        <input
+          type="text"
+          placeholder="ID"
+          class="registInput"
+          name="user_id"
+          id="user_id"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          class="registInput"
+          name="user_pw"
+          id="user_pw"
+        />
+        <input
+          type="mbti"
+          placeholder="mbti"
+          class="registInput"
+          name="user_mbti"
+          id="user_mbti"
+        />
+        <button type="submit">Join</button>
+        이미 가입하셨나요? &nbsp; <a href="/">로그인하기</a>
+      </form>
+    </main>
+  </body>
+</html>
