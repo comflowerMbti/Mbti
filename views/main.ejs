@@ -431,6 +431,7 @@
       function openPopup() {
         // 팝업을 열 때 보여줄 요소를 지정
         overlay.style.display = "flex";
+        scrollToBottom();
         localStorage.setItem("showPopupOnLoad", "true");
       }
 
@@ -440,6 +441,15 @@
         overlay.style.display = "none";
         localStorage.setItem("showPopupOnLoad", "none");
       }
+
+      // 스크롤을 맨 아래로 이동하는 함수
+      function scrollToBottom() {
+        var scrollContainer = document.getElementById("ch_chatBox");
+        scrollContainer.scrollTop = scrollContainer.scrollHeight;
+      }
+
+      // 페이지 로드 후 스크롤을 맨 아래로 이동
+      window.onload = scrollToBottom;
 
       document.addEventListener("DOMContentLoaded", function () {
         const radioButtons = document.querySelectorAll(
