@@ -421,6 +421,14 @@
     </section>
 
     <script>
+      function openNav() {
+        document.getElementById("sidebar").style.width = "20%";
+      }
+      function closeNav() {
+        document.getElementById("sidebar").style.width = "0";
+      }
+    </script>
+    <script>
       // overlay 변수를 전역으로 정의
       const overlay = document.getElementById("ch_overlay");
       overlay.style.display = "none";

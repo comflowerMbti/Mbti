@@ -19,19 +19,30 @@ const loginUser = asyncHandler(async (req, res) => {
   const { user_id, user_pw } = req.body;
   const allUsers = await User.find();
   const user = await User.findOne({ user_id });
-  const chat = await Chat.find({ chat_mbti: user.user_mbti });
+
   if (!user) {
-    return res.json({ message: "일치하는 사용자가 없습니다." });
+    // 'login.ejs'를 렌더링하고 알림 메시지를 전달합니다.
+    return res.render("login", { message: "일치하는 사용자가 없습니다." });
   }
+
   const isMatch = await bcrypt.compare(user_pw, user.user_pw);
+
   if (!isMatch) {
-    return res.json({ message: "비밀번호가 일치하지 않습니다." });
+    // 'login.ejs'를 렌더링하고 알림 메시지를 전달합니다.
+    return res.render("login", { message: "비밀번호가 일치하지 않습니다." });
   }
+
+  // 'user.user_mbti'의 존재 여부에 대한 추가 확인
+  const user_mbti = user.user_mbti || ""; // 'user_mbti'가 정의되지 않은 경우 기본값으로 빈 문자열 설정
+
+  const chat = await Chat.find({ chat_mbti: user_mbti });
 
   const token = jwt.sign({ id: user._id }, jwtSecret);
   res.cookie("token", token, {
     httpOnly: false,
   });
+
+  // 필요한 데이터와 함께 'main.ejs'를 렌더링합니다.
   res.render("main", { allUsers: allUsers, user: user, chat: chat });
 });
 
@@ -53,7 +64,7 @@ const registerUser = asyncHandler(async (req, res) => {
     user_mbti,
   });
 
-  res.render("login");
+  res.render("login", { message: "회원가입 성공" });
 });
 
 module.exports = { getLogin, loginUser, getRegister, registerUser };
