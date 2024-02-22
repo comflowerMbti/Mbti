@@ -11,7 +11,7 @@ const jwt = require("jsonwebtoken");
 
 // get '/'
 const getLogin = (req, res) => {
-  res.render("login");
+  res.render("login", { message: null });
 };
 
 // post '/'
