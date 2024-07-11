@@ -1,6 +1,6 @@
 ## MBTI Project
 
-MBTI가 같은 사람들끼리 대화할 수 있는 웹 사이트 <br/>
+MBTI를 활용한 친목 웹 사이트 <br/>
 
 <br/>
 
@@ -26,4 +26,6 @@ MBTI가 같은 사람들끼리 대화할 수 있는 웹 사이트 <br/>
 
 ### 🖼️ 프로젝트 화면
 
-![main](https://github.com/yundol777/to-do-list/assets/133326746/b8816fc2-e928-4512-8a2f-65670be40d79)
+![main](https://github.com/comflowerMbti/Mbti/assets/133326746/345b3836-d355-4477-a7d9-725c93c79899)
+![hover](https://github.com/comflowerMbti/Mbti/assets/133326746/3b1c3210-2c00-4d7d-b332-412f6917b4c0)
+![chat](https://github.com/comflowerMbti/Mbti/assets/133326746/037ee70d-efb6-48fd-a734-bd38a0b36e27)
